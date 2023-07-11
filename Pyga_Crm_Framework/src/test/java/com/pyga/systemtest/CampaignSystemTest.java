@@ -30,6 +30,7 @@ public class CampaignSystemTest extends BaseClass {
 	@Test(groups= {"smokeTest","regressionTest"})
 	public void createcCampaign() throws Throwable {
 	// Changes done from git hub
+		// ok done
 		String excelpath=flib.getPathFromPropertiesFile("testScript");
 		String vend=elib.getExcelDataById(excelpath, "System", "tc_01", "Vedor name");
 		String prod=elib.getExcelDataById(excelpath, "System", "tc_01", "Product Name");
