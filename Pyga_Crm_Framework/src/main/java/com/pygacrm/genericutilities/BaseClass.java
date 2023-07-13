@@ -34,13 +34,13 @@ public class BaseClass {
 	public void closeDB() throws SQLException {
 		dlib.closeDB();
 	}*/
-	@Parameters("browser")
+//	@Parameters("browser")
 	@BeforeClass(groups = {"smokeTest","regressionTest"})
-	public void openBrowser(String browser) throws Throwable {
+	public void openBrowser(/*String browser*/) throws Throwable {
 		propertypath=flib.getPathFromPropertiesFile("commondata");
 		String pbrowser=flib.getValueFromPropertiesFile(propertypath, "browser");
 		String url= flib.getValueFromPropertiesFile(propertypath, "url");
-		//String browser=System.getProperty("browser", pbrowser);
+		String browser=System.getProperty("browser", pbrowser);
 		/* Open Browser*/
 		if(browser.equalsIgnoreCase("chrome")) {
 			driver= new ChromeDriver();
